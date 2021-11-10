@@ -31,7 +31,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("localhost:5000/api/commits", requestOptions)
+fetch("https://tasktestapp.herokuapp.com/api/commits", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
