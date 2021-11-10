@@ -6,6 +6,6 @@ async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
   app.setGlobalPrefix('api');
 
-  await app.listen(5000);
+  await app.listen(parseInt(process.env.PORT) || 3000);
 }
 bootstrap();
